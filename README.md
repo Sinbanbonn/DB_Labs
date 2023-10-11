@@ -36,51 +36,51 @@ Logvinov Andrey 153501
 
 ## Models restrictions
 
-(OTM O_Breewery, M_Beer)
-(OTM O_BeerType, M_Beer)
-(OTM O_Beer, M_FoodPairing)
-(OTM O_Beer, M_BeerRating)
-(OTM O_Collection, M_Beer)
-Beer:
+#### (OTM O_Breewery, M_Beer)
+#### (OTM O_BeerType, M_Beer)
+#### (OTM O_Beer, M_FoodPairing)
+#### (OTM O_Beer, M_BeerRating)
+#### (OTM O_Collection, M_Beer)
+### Beer:
 + Name: String
 + Description: String
 + Photo: String(path)
 + Id: Int
 
-(OTM O_BeerType, M_Beer)
-(OTM O_Color, M_BeerType)
-(OTM O_Strength, M_BeerType)
-BeerType:
+#### (OTM O_BeerType, M_Beer)
+#### (OTM O_Color, M_BeerType)
+#### (OTM O_Strength, M_BeerType)
+### BeerType:
 + Category: String
 + Id: Int
 
-(OTM O_Color, M_BeerType)
-Color:
+#### (OTM O_Color, M_BeerType)
+### Color:
 + Name: String
 + Id: Int
 
-(OTM O_Strength, M_BeerType)
-Strength:
+#### (OTM O_Strength, M_BeerType)
+### Strength:
 + Name: String
 + Id: Int
 
 
-(OTM O_User, Brewery)
-(OTM O_Brewery, Beer)
-Brewery:
+#### (OTM O_User, Brewery)
+#### (OTM O_Brewery, Beer)
+### Brewery:
 + Name: String
 + PhoneNumber: String
 + Location: String
 + Region: String
 + Id: Int
 
-(OTM O_User, Breewery)
-(OTM O_Role, User)
-(OTM O_User, BeerEvent)(participates)
-(OTM O_User, BeerEvent)(organizes)
-(OTM O_User, Collections)
-(OTM O_User, BeerRating)
-User:
+#### (OTM O_User, Breewery)
+#### (OTM O_Role, User)
+#### (OTM O_User, BeerEvent)(participates)
+#### (OTM O_User, BeerEvent)(organizes)
+#### (OTM O_User, Collections)
+#### (OTM O_User, BeerRating)
+### User:
 + Username: String
 + Email: String
 + Password: String
@@ -89,42 +89,42 @@ User:
 + LastName: String
 + Id: Int
 
-(OTM O_Role, User)
-Role:
+#### (OTM O_Role, User)
+### Role:
 + Name: String
 + Id: Int
 
-(OTM O_Beer, BeerRating)
-(OTM O_User, BeerRating)
-BeerRating:
+#### (OTM O_Beer, BeerRating)
+#### (OTM O_User, BeerRating)
+### BeerRating:
 + Rating: Int
 + Description: String(optional)
 + Id: Int
 
-(OTM O_User,Collection)
-(MTM Beer, Collection)
-Collection:
+#### (OTM O_User,Collection)
+#### (MTM Beer, Collection)
+### Collection:
 + Name: String
 + Description: String
 + Id: Int
 
-(MTM Food, FoodPairings)
-(OTM O_Beer, M_FoodPairings)
-FoodPairings:
+#### (MTM Food, FoodPairings)
+#### (OTM O_Beer, M_FoodPairings)
+### FoodPairings:
 + Description: String
 + Id: Int
 
-(MTM FoodPairings, Food)
-Food
+#### (MTM FoodPairings, Food)
+### Food
 + Name: String
 + Description: String
 + Photo: String(path)
 + Id: Int
 
-(MTM User)(organised by)
-(MTM User)(accepts them)
-(MTM Beer)
-Beer Events:
+#### (MTM User)(organised by)
+#### (MTM User)(accepts them)
+#### (MTM Beer)
+### Beer Events:
 + Name: String
 + Date: String
 + Location: String
