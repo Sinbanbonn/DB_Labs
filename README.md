@@ -1,4 +1,4 @@
-# Platform for Job Hunting
+# Platform for BeerEvent
 
 Logvinov Andrey 153501
 
