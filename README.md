@@ -3,54 +3,27 @@
 Logvinov Andrey 153501
 
 ## Functional requirements
-### 1. Authorized User Flow:
-- **User Registration:**
-  - Users can register with a valid email, username, first name, and last name.
-  - Password validation follows the pattern /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.
-- **User Login:**
-  - Users can log in using their registered email.
-- **User Profile Management:**
-  - Users can view and update their personal details (firstName, lastName, email, username).
-  - Users can choose a role: Organisator, Admin, or Visitor.
-- **Organisator Actions:**
-  - Organisators can add new BeerEvents or create a new brewery.
-  - Organisators can add new types of beer or collections.
-  - Organisators can add new food pairings.
-  - Organisators can manage and invite users to events.
-  - Organisators can CRUD all types of their own beers.
-  - Organisators can respond to user comments.
+User roles:
 
-- **Beer Rating:**
-  - All users can select events and rate beers.
+•	simple customer
+CRUD its collections, wine ratings,
 
-### 2. Unauthorized User Flow:
-- **View-Only Access:**
-  - Users can view a list of BeerEvents, Breweries, Collections, Beers, and related information.
+•	Sommelier
+ Simple customer + CRUD food & food pairings
 
-### 3. Organisator Flow:
-- **Organisator Registration:**
-  - Organisators can register with an email, company name, and other essential details.
-- **Organisator Login:**
-  - Organisators can log in using their registered email.
-- **Event Management:**
-  - Organisators can create and manage events, associating them with collections and beer types.
-  - Organisators can view, edit, or delete their events.
-  - Organisators can invite users to events.
-- **Beer Management:**
-  - Organisators can CRUD all types of their own beers.
-  - Organisators can respond to user comments.
+•	Winery Owner
+Simple customer + CRUD its winery
 
-### 4. Admin Flow:
-- **BeerEvent Management:**
-  - Admins can manage the list of BeerEvents, adding, editing, or deleting their parts.
-- **Organisator Profile Management:**
-  - Admins can view, edit, or delete any organisator profile.
-- **User Profile Management:**
-  - Admins can view, edit, or delete any user profile.
-- **Beer Management:**
-  - Admins can manage all types of beers in the system.
-- **Review and Comment Management:**
-  - Admins can manage user reviews and comments, including approving, editing, or deleting them.
+•	Organizer
+Simple customer + CRUD its wine events
+
+•	Admin
+CRUD everything
+
+
+User authorization.
+Logging of user actions.
+
 
 (OTM O_Winery, M_Wines)
 (OTM O_Vintage, M_Wines)
